@@ -1,0 +1,43 @@
+@use "../../assets/variables";
+$primary-light: variables.$primary-light;
+
+.about-bg {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 75vh;
+  }
+}
+
+.section-container {
+  text-align: left;
+  padding: 3rem 15rem;
+  align-items: start;
+  background: lighten($primary-light, 30%);
+
+  @media (min-width: variables.$bp-sm) and (max-width: variables.$bp-xl) {
+    padding: 2rem 3rem !important;
+  }
+
+  @media (min-width: variables.$bp-xl) and (max-width: variables.$bp-xxl) {
+    padding: 2rem 5rem !important;
+  }
+}
+
+.text-heading {
+  font-size: 1.5rem;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 2rem;
+  column-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}

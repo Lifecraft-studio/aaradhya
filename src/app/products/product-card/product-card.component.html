@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-img d-flex align-items-center">
+      <img [src]="productsPrefix + productDetails.img" class="product-img" />
+    </div>
+    <div class="product-desc">
+      <h3>{{ productDetails.name }}</h3>
+      <div class="parent">
+        <div class="div1">
+          <p class="spec-heading">Business Type</p>
+          <p>{{ productDetails.businessType }}</p>
+        </div>
+        <div class="div2">
+          <p class="spec-heading">Buyer Preferred Location</p>
+          <p>{{ productDetails.buyerLocation }}</p>
+        </div>
+      </div>
+      <ng-container *ngIf="productDetails.details">
+        <h5>Product Details</h5>
+        <div class="parent spec">
+          <div *ngFor="let detail of productDetails.details | keyvalue">
+            <p class="spec-heading">{{ detail.key }}</p>
+            <p>{{ detail.value }}</p>
+          </div>
+        </div>
+      </ng-container>
+      <p>
+        {{ productDetails.description }}
+      </p>
+      <div class="enquiry-btn">
+        <button (click)="openEnquiryModal(content, productDetails.name)"><span>Send Enquiry</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <app-enquiry-form styleClass="p-1" [productName]="selectedProduct"></app-enquiry-form>
+  </div>
+
+</ng-template>

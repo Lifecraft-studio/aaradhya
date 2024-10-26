@@ -1,0 +1,8 @@
+<div class="products">
+  <h2>{{ productName }}</h2>
+  <p class="mb-4">{{ productTitle }}</p>
+  <app-product-card
+    *ngFor="let product of productsCategory"
+    [productDetails]="product"
+  ></app-product-card>
+</div>

@@ -1,0 +1,34 @@
+@use "../../assets/variables";
+
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+
+    .about {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: variables.$bp-sm) And (max-width: variables.$bp-lg) {
+    padding: 1rem;
+
+    .footer-content {
+      display: block;
+
+      .about {
+        width: 100%;
+      }
+    }
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

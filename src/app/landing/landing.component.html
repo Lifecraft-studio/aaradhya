@@ -1,0 +1,243 @@
+<div class="slider">
+  <!-- fade css -->
+  <div class="myslide fade" #slide>
+    <img src="assets/slider/slide1.png" style="width: 100%; height: 100%" />
+  </div>
+
+  <div class="myslide fade" #slide>
+    <img src="assets/slider/slide2.jpg" style="width: 100%; height: 100%" />
+  </div>
+
+  <div class="myslide fade" #slide>
+    <img src="assets/slider/slide3.jpg" style="width: 100%; height: 100%" />
+  </div>
+  <div class="myslide fade" #slide>
+    <img src="assets/slider/slide4.png" style="width: 100%; height: 100%" />
+  </div>
+
+  <!-- onclick js -->
+  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+</div>
+<section class="section-container">
+  <div class="about-counters ps-5">
+    <div class="counter-item">
+      <img src="assets/icons/building.svg" width="80px" height="70px" />
+      <p class="counter-text"><span>Year of Establishment </span><br />2013</p>
+    </div>
+    <div class="counter-item">
+      <img src="assets/icons/business.svg" width="70px" height="65px" />
+      <p class="counter-text">
+        <span>Nature of Business </span><br />
+        Manufacturer, Exporter & Supplier
+      </p>
+    </div>
+    <div class="counter-item">
+      <img src="assets/icons/employee.svg" width="60px" height="80px" />
+      <p class="counter-text">
+        <span>Number of Employees </span><br />
+        250
+      </p>
+    </div>
+    <div class="counter-item">
+      <img src="assets/icons/market.svg" width="70px" height="70px" />
+      <p class="counter-text">
+        <span>Market Covered</span><br />
+        Domestic & International
+      </p>
+    </div>
+    <div class="counter-item">
+      <img src="assets/icons/gst.svg" width="70px" height="75px" />
+      <p class="counter-text">
+        <span>GST No.</span><br />
+        23AAMCA3724A1Z9
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section-container">
+  <div class="about-section">
+    <div class="about-img">
+      <img src="assets/about.jpeg" alt="about" width="500px" height="500px" />
+    </div>
+    <div class="about-text-container">
+      <h6 class="section-heading text-primary about-heading" #about>
+        Who Are We ?
+      </h6>
+      <div class="about text-start">
+        <p class="about-text">
+          <span class="highlighted-text mb-2 d-inline-block">We are a reputed and established company dedicated to
+            environmental
+            health through its range of paper cup blank, ripple blank and other
+            high quality paper products.</span><br />
+          We use premium raw materials such as ITC, Century, Nippon, and West
+          Coast, the company ensures high-quality production. Specializing in
+          <span class="text-primary">Poly Coated Paper Rolls, Embossed Ripple Wall Paper Fans,
+            Bio-degradable coated paper and Multi-Colour Paper Fans</span>. <br />
+          Aaradhya Disposal Industries Pvt Ltd and Sri Kriscon Industries has
+          emerged as unparalleled leading name in the field of printing ,
+          packaging with its factory at Dewas M.P.(INDIA) and also have its
+          opertaion Abroad (DUBAI). <br />
+          With over a decade of experience, the company boasts a skilled and
+          qualified team committed to client satisfaction. All designs are
+          meticulously crafted by a professional team, and quality assurance is
+          maintained at every stage of production by adept quality experts.
+          Aaradhya aims to expand its reach globally, backed by its dedication
+          to innovation and quality.
+        </p>
+        <a class="btn btn-primary" href="assets/catalog.pdf" download="catalog.pdf">Download Our Catalog</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="section-container">
+  <p class="section-heading" #about>Our Products</p>
+  <div class="services">
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Coated Paper</h2>
+        <p class="copy">
+          Leading Manufacturer and exporter of eco-friendly papers.
+        </p>
+        &nbsp;
+        <a class="btn" routerLink="/products/coatedPaper">View More</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">PE Coated Rolls</h2>
+        <p class="copy">
+          Leading Manufacturers and Exporters of PE Coated Bottom Rolls and PE
+          Coated Paper Rolls.
+        </p>
+        <a class="btn" routerLink="/products/coatedRoll">View More</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Paper Cup Blank</h2>
+        <p class="copy">
+          Leading Manufacturers and Exporters of Paper Cup Blank.
+        </p>
+        <a class="btn" routerLink="/products/paperBlank">View More</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Ripple Paper</h2>
+        <p class="copy">Leading Manufacturers and Exporters of Ripple Paper.</p>
+        <a class="btn" routerLink="/products/ripple">View More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Clients -->
+<section class="section-container">
+  <p class="section-heading" #about>Our Clients</p>
+  <div class="services clients">
+    <div *ngFor="let client of indianClients">
+      <img [src]="client.img" alt="" width="100px">
+    </div>
+  </div>
+</section>
+
+<!-- Our International Clients -->
+<section class="section-container">
+  <p class="section-heading" #about>Our International Clients</p>
+  <div class="services clients">
+    <div *ngFor="let client of internationalClients">
+      <img [src]="client.img" alt="" width="100px">
+    </div>
+  </div>
+</section>
+
+<!-- Mission Section -->
+<section class="section-container parallax">
+  <div class="mission-container">
+    <div class="mission">
+      <div class="icon">
+        <img src="assets/icons/mission.svg" height="40px" width="auto" />
+      </div>
+      <div>
+        <h3>Our Mission</h3>
+        <p>
+          To be the leader in Industry by providing quality and innovative
+          products.
+        </p>
+      </div>
+    </div>
+    <div class="mission">
+      <div class="icon">
+        <img src="assets/icons/vision.svg" height="40px" width="auto" />
+      </div>
+      <div>
+        <h3>Our Vision</h3>
+        <p>
+          To become the one stop solution for all industries for packaging
+          materials.
+        </p>
+      </div>
+    </div>
+    <div class="mission">
+      <div class="icon">
+        <img src="assets/icons/values.png" height="40px" width="auto" />
+      </div>
+      <div>
+        <h3>Our Values</h3>
+        <p>
+          With sustainibility approach we work on ethics for producing
+          innovative and quality products.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Enquiry Section -->
+<section class="contact-container">
+  <app-enquiry-form></app-enquiry-form>
+  <div class="location">
+    <h1>Find Us</h1>
+    <p class="contact-heading">
+      <img src="/assets/icons/location.svg" width="20px" height="20px" /> Head
+      Office
+    </p>
+    <p class="contact-detail">
+      E1, Industrial Area No.1, A.B. Road Dewas - 455001 MADHYA PRADESH, (INDIA)
+    </p>
+    <p class="contact-detail ps-0">
+      <img src="/assets/icons/call.svg" width="20px" height="20px" />
+      +91 99936 53333 (India)
+    </p>
+    <p class="contact-heading">
+      <img src="/assets/icons/location.svg" width="20px" height="20px" /> Abroad
+      Office
+    </p>
+    <p class="contact-detail">
+      Unit Numbers 19,20,21, Block E Phase 2, DIC, PO BOX : 37774, DUBAI, UAE
+    </p>
+    <p class="contact-detail ps-0">
+      <img src="/assets/icons/call.svg" width="20px" height="20px" />
+      +971 55 336 1202 (Dubai)
+    </p>
+    <p class="contact-detail ps-0 d-flex gap-2">
+      <img src="/assets/icons/email.svg" width="20px" height="20px" class="pt-2" />
+      <span class="d-flex flex-column d-inline-block">
+        <span>alkrisglobal@gmail.com </span>
+        <span>international@aaradhyapaperindustries.com </span>
+        <span>contact@aaradhyapaperindustries.com</span>
+      </span>
+    </p>
+
+    <!-- <p>Anil Maheshwari</p>
+    Industrial Area , No.1 A.B. Road,Dewas,<br />
+    Madhya Pradesh - 455001, India <br />
+    <span>Email : </span> contact&#64;aaradhyapaperindustries.com <br />
+    <span>Contact :</span> 9993653333 -->
+  </div>
+</section>

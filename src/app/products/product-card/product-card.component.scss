@@ -1,0 +1,118 @@
+@use "../../../assets/variables";
+$primary-light: variables.$primary-light;
+
+p {
+  margin: 0;
+}
+
+.card {
+  background: lighten($primary-light, 35%);
+
+  .card-body {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: center;
+
+    .product-desc {
+      width: 75%;
+    }
+
+    .card-img {
+      width: 25%;
+    }
+
+    @media (min-width: variables.$bp-sm) and (max-width: variables.$bp-xl) {
+      flex-direction: column;
+
+      .product-desc {
+        width: 100%;
+      }
+
+      .card-img {
+        width: 50%;
+      }
+    }
+
+    // @media (min-width: variables.$bp-xl) and (max-width: variables.$bp-xxl) {
+    //   padding: 2rem 5rem !important;
+    // }
+  }
+
+  .card-img {
+    background: transparent;
+
+    img {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 70px 63px -60px #000000;
+    }
+  }
+
+  .product-desc {
+    background: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+
+    .parent {
+      display: flex;
+      gap: 2rem;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+
+      .spec-heading {
+        color: #8c8c8c;
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+
+    .spec {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 3rem;
+      grid-row-gap: 0.5rem;
+    }
+
+    .enquiry-btn {
+      button {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 1rem auto;
+        text-transform: uppercase;
+        border: 1px solid variables.$primary-color;
+        width: 200px;
+        height: 50px;
+        background: white;
+        color: lighten(variables.$primary-color, 0.5);
+
+        span {
+          position: relative;
+          z-index: 2;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: darken(variables.$primary-color, 0.5);
+          transition: all 0.35s;
+        }
+
+        &:hover {
+          color: #fff;
+
+          &:before {
+            transform: translateX(0);
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
