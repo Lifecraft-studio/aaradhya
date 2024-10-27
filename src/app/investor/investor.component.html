@@ -1,0 +1,17 @@
+<p class="investor-header">
+  Investor Insights: A Gateway to Growth and Innovation at AVPL. Delve into the
+  possibilities of investment that drive our mission to revolutionize
+  agriculture, empower communities, and build a sustainable future. Be a part of
+  the cultivation of success and the realization of impactful investments with
+  AVPL.
+</p>
+
+<div class="investor-container">
+  <ul class="investor-nav">
+    <li *ngFor="let item of navItems" (click)="navigateTo(item.route)">
+      {{ item.label }}
+    </li>
+  </ul>
+
+  <router-outlet></router-outlet>
+</div>

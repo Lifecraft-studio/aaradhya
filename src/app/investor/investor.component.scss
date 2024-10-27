@@ -1,0 +1,59 @@
+@use "../../assets/variables";
+
+
+.investor-header {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.investor-container {
+  display: flex;
+  
+  
+  padding: 20px;
+  
+
+  
+
+  .investor-nav {
+  //   display: flex;
+  // flex-direction: column;
+  align-items: start;
+    width: 100%;
+    max-width: 300px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+
+    li {
+      padding: 15px;
+      font-size: 16px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      background-color: #f5f5f5;
+      cursor: pointer;
+      text-align: center;
+
+      &:hover {
+        background-color: brown;
+      }
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+
+  // .investor-content {
+  //   flex: 1; // Takes remaining width
+  //   background-color: #ffffff;
+  //   padding: 20px;
+  //   border-radius: 8px;
+  //   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  // }
+}
