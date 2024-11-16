@@ -6,6 +6,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./investor.component.scss']
 })
 export class InvestorComponent {
+
+ 
+
   navItems = [
     { label: 'General Details', route: 'general-details' },
     { label: 'General Meeting Notice', route: 'general-meeting-notice' },
@@ -31,6 +34,8 @@ export class InvestorComponent {
       label:'Dividend' , route:'dividend'
     }
   ];
+
+  selectedItem = this.navItems[0];
 
 
   constructor(private router: Router) {}

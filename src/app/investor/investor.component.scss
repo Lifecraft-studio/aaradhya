@@ -3,32 +3,21 @@
 
 .investor-header {
   text-align: center;
-  font-size: 16px;
-  margin-bottom: 20px;
   color: #666;
-  margin-top: 2rem;
-  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .investor-container {
-  display: flex;
-  
-  
   padding: 20px;
   
-
-  
-
   .investor-nav {
-  //   display: flex;
-  // flex-direction: column;
-  align-items: start;
+    margin: auto;
     width: 100%;
     max-width: 300px;
     list-style: none;
     padding: 0;
-    margin: 0;
     border: 1px solid #ddd;
+    margin-bottom: 1.5rem;
 
     li {
       padding: 15px;
@@ -39,8 +28,17 @@
       cursor: pointer;
       text-align: center;
 
+      &.link-active {
+        background-color: variables.$primary-color;
+        color: #fff;
+      }
+      
       &:hover {
-        background-color: brown;
+        background-color: variables.$primary-light;
+      }
+
+      a {
+        text-decoration: none;
       }
     }
 
@@ -49,11 +47,23 @@
     }
   }
 
-  // .investor-content {
-  //   flex: 1; // Takes remaining width
-  //   background-color: #ffffff;
-  //   padding: 20px;
-  //   border-radius: 8px;
-  //   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  // }
+  .investor-details {
+    width: 100%;
+  }
+
+  @media (min-width: variables.$bp-lg) {
+    display: flex;
+    gap: 2.5rem;
+    align-items: start;
+    .investor-nav {
+      margin: 0;
+      position: sticky;
+      top: 2rem;
+      width: 30%;
+    }
+
+    .investor-details {
+      width: 70%;
+    }
+  }
 }

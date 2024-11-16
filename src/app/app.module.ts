@@ -14,21 +14,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { InvestorComponent } from './investor/investor.component';
-import { GeneralDetailsComponent } from './general-details/general-details.component';
-import { GeneralMeetingNoticeComponent } from './general-meeting-notice/general-meeting-notice.component';
-import { PoliciesAndCodeOfConductComponent } from './policies-and-code-of-conduct/policies-and-code-of-conduct.component';
-import { InitialPublicOfferComponent } from './initial-public-offer/initial-public-offer.component';
-import { AnnualReportComponent } from './annual-report/annual-report.component';
-import { ArticleOfAssociationComponent } from './article-of-association/article-of-association.component';
-import { FinancialInformationComponent } from './financial-information/financial-information.component';
-import { NewspaperPublicationComponent } from './newspaper-publication/newspaper-publication.component';
-import { MaterialityPolicyComponent } from './materiality-policy/materiality-policy.component';
-import { CompositionOfBoardAndCommitteComponent } from './composition-of-board-and-committe/composition-of-board-and-committe.component';
-import { DetailsOfKeyManagerialPersonnelComponent } from './details-of-key-managerial-personnel/details-of-key-managerial-personnel.component';
-import { CorporateAnnouncementComponent } from './corporate-announcement/corporate-announcement.component';
-import { FormsComponent } from './forms/forms.component';
-import { DisclosureComponent } from './disclosure/disclosure.component';
-import { DividendComponent } from './dividend/dividend.component';
+import { GeneralDetailsComponent } from './investor/general-details/general-details.component';
+import { GeneralMeetingNoticeComponent } from './investor/general-meeting-notice/general-meeting-notice.component';
+import { PoliciesAndCodeOfConductComponent } from './investor/policies-and-code-of-conduct/policies-and-code-of-conduct.component';
+import { InitialPublicOfferComponent } from './investor/initial-public-offer/initial-public-offer.component';
+import { AnnualReportComponent } from './investor/annual-report/annual-report.component';
+import { ArticleOfAssociationComponent } from './investor/article-of-association/article-of-association.component';
+import { FinancialInformationComponent } from './investor/financial-information/financial-information.component';
+import { NewspaperPublicationComponent } from './investor/newspaper-publication/newspaper-publication.component';
+import { MaterialityPolicyComponent } from './investor/materiality-policy/materiality-policy.component';
+import { CompositionOfBoardAndCommitteComponent } from './investor/composition-of-board-and-committe/composition-of-board-and-committe.component';
+import { DetailsOfKeyManagerialPersonnelComponent } from './investor/details-of-key-managerial-personnel/details-of-key-managerial-personnel.component';
+import { CorporateAnnouncementComponent } from './investor/corporate-announcement/corporate-announcement.component';
+import { FormsComponent } from './investor/forms/forms.component';
+import { DisclosureComponent } from './investor/disclosure/disclosure.component';
+import { DividendComponent } from './investor/dividend/dividend.component';
 import { CardComponent } from './card/card.component';
 
 export const routes: Routes = [
@@ -71,8 +71,8 @@ export const routes: Routes = [
       {path: 'corporate-announcement', component:CorporateAnnouncementComponent},
       {path:'forms', component:FormsComponent},
       {path:'disclosure', component:DisclosureComponent},
-      {path:'dividend', component:DividendComponent}
-      
+      {path:'dividend', component:DividendComponent},
+      {path:'', redirectTo:'general-details', pathMatch:'full'}
     ]
      
   }

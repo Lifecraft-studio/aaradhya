@@ -1,17 +1,22 @@
-<p class="investor-header">
-  Investor Insights: A Gateway to Growth and Innovation at AVPL. Delve into the
-  possibilities of investment that drive our mission to revolutionize
-  agriculture, empower communities, and build a sustainable future. Be a part of
-  the cultivation of success and the realization of impactful investments with
-  AVPL.
-</p>
+<div class="container">
+  <p class="investor-header">
+    Investor Insights: A Gateway to Growth and Innovation at Aardhya Disposal Ltd. Delve into the
+    possibilities of investment that drive our mission to revolutionize
+    agriculture, empower communities, and build a sustainable future. Be a part of
+    the cultivation of success and the realization of impactful investments with
+    Aardhya Disposal Ltd.
+  </p>
 
-<div class="investor-container">
-  <ul class="investor-nav">
-    <li *ngFor="let item of navItems" (click)="navigateTo(item.route)">
-      {{ item.label }}
-    </li>
-  </ul>
+  <div class="investor-container">
+    <ul class="investor-nav">
+      <li *ngFor="let item of navItems" (click)="selectedItem = item; navigateTo(item.route)" [ngClass]="{'link-active' : item===selectedItem}">
+        {{ item.label }}
+      </li>
+    </ul>
 
-  <router-outlet></router-outlet>
+    <div class="investor-details">
+    <router-outlet></router-outlet>
+
+    </div>
+  </div>
 </div>

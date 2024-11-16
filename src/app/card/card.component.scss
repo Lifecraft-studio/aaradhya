@@ -9,7 +9,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   width: 200px;
-  margin: 10px auto;
+  height: 100%;
+ 
 
   a {
     display: block;
@@ -30,7 +31,6 @@
 
   /* Responsive Styles */
   @media (max-width: 768px) {
-    width: 150px;
 
     a img {
       width: 60px;
@@ -43,7 +43,6 @@
   }
 
   @media (max-width: 480px) {
-    width: 120px;
 
     a img {
       width: 50px;
