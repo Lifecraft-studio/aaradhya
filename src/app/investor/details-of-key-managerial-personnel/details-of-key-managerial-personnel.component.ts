@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class DetailsOfKeyManagerialPersonnelComponent {
 
   cards=[
-    { name: 'List of Key Managerial Personnel', url: '/assets/investors/kmp/kmp.pdf' }
+    { name: 'List of Key Managerial Personnel', url: '/assets/investors/kmp/list_of_KMP.pdf' }
   ]
 
 }

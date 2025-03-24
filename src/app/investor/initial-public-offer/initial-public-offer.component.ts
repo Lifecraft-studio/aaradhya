@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class InitialPublicOfferComponent {
   cards = [
-    // { name: 'fgfgf', url: 'https://google.com' },
+     { name: 'DRHP', url: '/assets/investors/ipo/DRHP.pdf' },
+     { name: 'Addendum to DRHP', url: '/assets/investors/ipo/Addendum_to_DRHP.pdf' }
   ]
 
 }
