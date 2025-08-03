@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class InitialPublicOfferComponent {
   cards = [
      { name: 'DRHP', url: '/assets/investors/ipo/DRHP.pdf' },
-     { name: 'Addendum to DRHP', url: '/assets/investors/ipo/Addendum_to_DRHP.pdf' }
+     { name: 'Addendum to DRHP', url: '/assets/investors/ipo/Addendum_to_DRHP.pdf' },
+     { name: 'Red Herring Prospectus', url: '/assets/investors/ipo/red_herring_prospectus.pdf' }
   ]
 
 }
