@@ -30,6 +30,8 @@ import { FormsComponent } from './investor/forms/forms.component';
 import { DisclosureComponent } from './investor/disclosure/disclosure.component';
 import { DividendComponent } from './investor/dividend/dividend.component';
 import { CardComponent } from './card/card.component';
+import { IndustryReportsComponent } from './investor/industry-reports/industry-reports.component';
+import { PriceBandComponent } from './investor/price-band/price-band.component';
 
 export const routes: Routes = [
   {
@@ -72,6 +74,8 @@ export const routes: Routes = [
       {path:'forms', component:FormsComponent},
       {path:'disclosure', component:DisclosureComponent},
       {path:'dividend', component:DividendComponent},
+      {path:'industry-reports', component:IndustryReportsComponent},
+      {path:'pre-issue-cum-price-band-ad', component:PriceBandComponent},
       {path:'', redirectTo:'general-details', pathMatch:'full'}
     ]
      
@@ -105,6 +109,8 @@ export const routes: Routes = [
     DisclosureComponent,
     DividendComponent,
     CardComponent,
+    IndustryReportsComponent,
+    PriceBandComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes), ReactiveFormsModule, NgbModalModule,
     HttpClientModule

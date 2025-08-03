@@ -21,9 +21,7 @@ export class InvestorComponent {
     { label: 'Materiality Policy', route: 'materiality-policy' },
     { label: 'Composition Of Board And Committee', route: 'composition-of-board-and-committee' },
     {label: 'Details Of Key Managerial Personnel', route:'details-of-key-managerial-personnel'},
-    {
-      label: 'Corporate Announcement' , route:'corporate-announcement'
-    },
+    { label: 'Corporate Announcement' , route:'corporate-announcement' },
     {
       label:'Forms' , route:'forms'
     },
@@ -32,6 +30,12 @@ export class InvestorComponent {
     },
     {
       label:'Dividend' , route:'dividend'
+    },
+    {
+      label:'Industry Reports' , route:'industry-reports'
+    },
+    {
+      label:'Pre-Issue cum Price Band Ad' , route:'pre-issue-cum-price-band-ad'
     }
   ];
 
